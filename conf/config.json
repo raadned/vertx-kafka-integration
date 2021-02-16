@@ -1,0 +1,18 @@
+{
+  "kafka": {
+    "consumer": {
+      "host": "localhost:9092",
+      "auto.offset.reset": "earliest",
+      "group.id": "my_group",
+      "enable.auto.commit": "true",
+      "key.deserializer" : "org.apache.kafka.common.serialization.StringDeserializer",
+      "value.deserializer" : "org.apache.kafka.common.serialization.StringDeserializer"
+    },
+    "producer": {
+      "host": "localhost:9092",
+      "acks": "1",
+      "key.serializer" : "org.apache.kafka.common.serialization.StringSerializer",
+      "value.serializer" : "org.apache.kafka.common.serialization.StringSerializer"
+    }
+  }
+}
