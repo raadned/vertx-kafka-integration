@@ -7,9 +7,7 @@ Project created to demo the Vert.x client integration with Apache Kafka.
 
 ## Setup required
 
-1. Install Kafka
-
-- instructions to follow
+1. Install Kafka (instructions to follow)
 
 ## Running locally
 
