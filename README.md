@@ -7,11 +7,11 @@ Sample Vert.X application interacting with a Kafka queue.
 # About
 
 Sample project to demo the Vert.X Kafka client.
-
- - A Vert.X websever exposes a REST endpoint that will invoke the
+The main components are:
+ - A Vert.X webserver exposing a REST endpoint that will invoke the
    Kafka producer.
  - Consumers are then listening to the queue and processing the
-   messages.
+   messages. These are modelled as worker verticles.
  - Configuration is passed as json files
 
 ## Dependencies required to run the project
