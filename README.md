@@ -4,17 +4,18 @@
 
 Sample Vert.X application interacting with a Kafka queue.
 
-# About
+# Project Description
 
 Sample project to demo the Vert.X Kafka client.
+
 The main components are:
  - A Vert.X webserver exposing a REST endpoint that will invoke the
    Kafka producer.
  - Consumers are then listening to the queue and processing the
    messages. These are modelled as worker verticles.
- - Configuration is passed as json files
+ - Project configuration is passed in using a json file
 
-## Dependencies required to run the project
+## Dependencies
 
 1.  Kafka    ( instructions to install are available here: https://kafka.apache.org/quickstart )
 
@@ -26,3 +27,4 @@ Start the project by running the Main class in Intellij.
 ## Future work
 
  - Deploy to Kubernetes
+ - Create fat jar
