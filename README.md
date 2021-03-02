@@ -1,16 +1,28 @@
-# vertx-kafka-integration
-Sample Vert.X - Kafka integration
+
+
+# Vert.X - Kafka
+
+Sample Vert.X application interacting with a Kafka queue.
 
 # About
 
-Project created to demo the Vert.x client integration with Apache Kafka.
+Sample project to demo the Vert.X Kafka client.
 
-## Setup required
+ - A Vert.X websever exposes a REST endpoint that will invoke the
+   Kafka producer.
+ - Consumers are then listening to the queue and processing the
+   messages.
+ - Configuration is passed as json files
 
-1. Install Kafka (instructions to follow)
+## Dependencies required to run the project
+
+1.  Kafka    ( instructions to install are available here: https://kafka.apache.org/quickstart )
+
 
 ## Running locally
 
 Start the project by running the Main class in Intellij.
-Option to run using the generated jar incoming soon :)
 
+## Future work
+
+ - Deploy to Kubernetes
