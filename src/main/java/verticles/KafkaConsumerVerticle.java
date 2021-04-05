@@ -16,16 +16,16 @@ public class KafkaConsumerVerticle extends AbstractVerticle {
     public void start() {
         logger.info("Started kafka-consumer");
 
-        Map<String, String> config = new HashMap<>();
-        config.put("bootstrap.servers", config().getString("host"));
-        config.put("key.deserializer", config().getString("key.deserializer"));
-        config.put("value.deserializer", config().getString("value.deserializer"));
-        config.put("group.id", config().getString("group.id"));
-        config.put("auto.offset.reset", config().getString("auto.offset.reset"));
-        config.put("enable.auto.commit", config().getString("enable.auto.commit"));
+        Map<String, String> consumerConfig = new HashMap<>();
+        consumerConfig.put("bootstrap.servers", config().getString("host"));
+        consumerConfig.put("key.deserializer", config().getString("key.deserializer"));
+        consumerConfig.put("value.deserializer", config().getString("value.deserializer"));
+        consumerConfig.put("group.id", config().getString("group.id"));
+        consumerConfig.put("auto.offset.reset", config().getString("auto.offset.reset"));
+        consumerConfig.put("enable.auto.commit", config().getString("enable.auto.commit"));
 
         // use consumer for interacting with Apache Kafka
-        KafkaConsumer<String, String> consumer = KafkaConsumer.create(vertx, config);
+        KafkaConsumer<String, String> consumer = KafkaConsumer.create(vertx, consumerConfig);
         consumer.handler(record -> {
             logger.info("Processing key=" + record.key() + ",value=" + record.value() +
                     ",partition=" + record.partition() + ",offset=" + record.offset());
