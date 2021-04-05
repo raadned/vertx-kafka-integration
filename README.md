@@ -10,11 +10,11 @@ Sample project to test the Vert.X - Kafka integration.
 
 The main components are:
 
- - A Vert.X webserver exposing a REST endpoint that will invoke the
+ - A Vert.X webserver exposing a REST endpoint that will trigger the
    Kafka producer.
- - Consumers are then listening to the queue and processing the
+ - Consumers are listening to the queue and processing the
    messages. These are modelled as worker verticles.
- - Project configuration is passed in using a json file
+ - Project configuration is passed in as json
 
 ## Dependencies
 
