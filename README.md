@@ -2,13 +2,14 @@
 
 # Vert.X - Kafka
 
-Sample Vert.X application interacting with a Kafka queue.
+Sample Vert.X application interacting with a Kafka topic.
 
 # Project Description
 
-Sample project to demo the Vert.X Kafka client.
+Sample project to test the Vert.X - Kafka integration.
 
 The main components are:
+
  - A Vert.X webserver exposing a REST endpoint that will invoke the
    Kafka producer.
  - Consumers are then listening to the queue and processing the
@@ -17,14 +18,12 @@ The main components are:
 
 ## Dependencies
 
-1.  Kafka    ( instructions to install are available here: https://kafka.apache.org/quickstart )
-
+ -  Kafka  ( instructions to install are available at: https://kafka.apache.org/quickstart )
 
 ## Running locally
 
-Start the project by running the Main class in Intellij.
+Start the project by running the Main class in IntelliJ.
 
 ## Future work
 
- - Deploy to Kubernetes
- - Create fat jar
+ - K8 deployments
