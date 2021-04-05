@@ -21,12 +21,11 @@ public class CustomHttpServer extends AbstractVerticle {
 
         Router router = Router.router(vertx);
         router.route().handler(BodyHandler.create());
-        router.post().path("/hello").handler(this::replyToRequest);
-
-        server.requestHandler(router).listen(8069);
+        router.post().path("/event").handler(this::handleRequest);
+        server.requestHandler(router).listen(8080);
     }
 
-    public void replyToRequest(RoutingContext ctx) {
+    public void handleRequest(RoutingContext ctx) {
         // This handler will be called for every request
         HttpServerResponse response = ctx.response();
         response.putHeader("content-type", "application/json");
