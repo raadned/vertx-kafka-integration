@@ -34,7 +34,7 @@ public class KafkaProducerVerticle extends AbstractVerticle {
         bus.<JsonObject>consumer("kafka.producer", msg -> {
             JsonObject body = msg.body();
             //logger.info("Received message = {}", body);
-            KafkaProducerRecord<String, String> record = KafkaProducerRecord.create("quickstart-events", "Radu", body.getString("payload"));
+            KafkaProducerRecord<String, String> record = KafkaProducerRecord.create("quickstart-events", body.getString("payload"));
             producer.write(record);
 
         });
