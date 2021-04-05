@@ -36,6 +36,6 @@ public class Main {
 
         DeploymentOptions producerConfig = new DeploymentOptions().setConfig(config.getJsonObject("kafka").getJsonObject("producer"));
         vertx.deployVerticle(KafkaProducerVerticle.class, producerConfig);
-        vertx.deployVerticle(new CustomHttpServer());
+        vertx.deployVerticle(CustomHttpServer.class, new DeploymentOptions().setConfig(config.getJsonObject("server")));
     }
 }

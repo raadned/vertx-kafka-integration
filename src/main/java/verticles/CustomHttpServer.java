@@ -21,8 +21,8 @@ public class CustomHttpServer extends AbstractVerticle {
 
         Router router = Router.router(vertx);
         router.route().handler(BodyHandler.create());
-        router.post().path("/event").handler(this::handleRequest);
-        server.requestHandler(router).listen(8080);
+        router.post().path("/events").handler(this::handleRequest);
+        server.requestHandler(router).listen(config().getInteger("port"));
     }
 
     public void handleRequest(RoutingContext ctx) {
