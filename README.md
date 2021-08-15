@@ -1,6 +1,6 @@
 # Vert.X - Kafka
 
-Sample Vert.X application interacting with a Kafka topic.
+Vert.X application interacting with a Kafka topic.
 
 # Project Description
 
