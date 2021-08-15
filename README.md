@@ -12,7 +12,7 @@ The main components are:
    Kafka producer.
  - Consumers are listening to the Kafka topic and processing the
    messages. The Kafka consumers are based on Vert.X worker verticles.
- - Project configuration is passed in as json
+ - Project configuration is passed in as JSON
 
 ## Dependencies
 
