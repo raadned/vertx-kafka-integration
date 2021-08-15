@@ -4,14 +4,14 @@ Vert.X application interacting with a Kafka topic.
 
 # Project Description
 
-Sample project to test the Vert.X - Kafka integration.
+Vert.x service interacting with a Kafka topic.
 
 The main components are:
 
- - A Vert.X webserver exposing a REST endpoint that will trigger the
+ - A Vert.X webserver exposing a REST endpoint that will activate the
    Kafka producer.
- - Consumers are listening to the queue and processing the
-   messages. These are modelled as worker verticles.
+ - Consumers are listening to the Kafka topic and processing the
+   messages. The Kafka consumers are based on Vert.X worker verticles.
  - Project configuration is passed in as json
 
 ## Dependencies
@@ -20,7 +20,14 @@ The main components are:
 
 ## Running locally
 
+### Using IntelliJ
 Start the project by running the Main class in IntelliJ.
+
+#### Using Docker
+
+`docker build . -t <TAG_NAME>`
+
+`docker start <TAG_NAME>`
 
 ## Future work
 
